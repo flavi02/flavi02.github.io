@@ -838,4 +838,15 @@
     </div>
   </section>
 
-  <!-- FOOT
+  <!-- FOOTER -->
+  <script>
+    const toggle = document.getElementById('darkToggle');
+    const body = document.body;
+    if (localStorage.getItem('theme') === 'dark') body.classList.add('dark');
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>
